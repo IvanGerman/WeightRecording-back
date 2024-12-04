@@ -9,7 +9,7 @@ module.exports.getMembers = async function(req, res) { console.log('getMembers')
     const allMembers = await Members.find();
     res.status(200).json(allMembers);
   } catch(err) {
-    res.status(404).json({
+    res.status(405).json({
       message: 'an error occured!'
     })
   }     
